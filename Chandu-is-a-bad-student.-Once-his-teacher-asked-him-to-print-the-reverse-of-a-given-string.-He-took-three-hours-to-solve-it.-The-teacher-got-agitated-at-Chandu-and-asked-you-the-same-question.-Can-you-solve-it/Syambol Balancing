@@ -1,0 +1,39 @@
+//parenthisis matching using Stack
+import java.util.Stack;
+import java.util.*;
+class SymMatch
+{
+	public static void main(String args[])
+	{
+		String str,res;
+		char ch;
+		Scanner sc=new Scanner(System.in);
+		Stack stk=new Stack();
+		System.out.println("Enter expression:");
+		str=sc.next();
+		int len=str.length();
+		for(int i=0;i<len;i++)
+		{
+			if(str.charAt(i)=='(')
+			{
+				
+				stk.push(i);
+			}
+			else
+			{
+				if(str.charAt(i)==')')
+				stk.pop();
+			}
+			
+		}
+		if(stk.isEmpty())
+					System.out.println("match expression:");
+		else
+	
+					System.out.println(" no match expression:");
+		
+	}
+}
+		
+		
+		
