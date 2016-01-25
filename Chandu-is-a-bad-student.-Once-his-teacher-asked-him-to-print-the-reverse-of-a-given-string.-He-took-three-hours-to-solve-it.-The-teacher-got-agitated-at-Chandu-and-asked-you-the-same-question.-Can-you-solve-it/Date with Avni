@@ -1,0 +1,41 @@
+//Date with avni
+import java.util.*;
+class SlapKiss
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		String s;
+		int n,i;
+	
+		n=sc.nextInt();
+	
+		for(int j=0;j<n;j++)
+		{
+			s=sc.next();
+			i=0;
+			int len=s.length();
+			while(i<len-1)
+			{
+				if(s.charAt(i)==s.charAt(i+1))
+				{
+					break;
+				}
+				else
+				{
+					i++;
+				}
+			}
+			if(i==len-1)
+			{
+				System.out.println("KISS");
+			}
+			else
+			{
+				System.out.println("SLAP");
+			}
+				
+		}
+	}
+}
+	
